@@ -1,5 +1,5 @@
 let mongoose = require('mongoose')
-mongoose.connect('localhost:27017/test-merij-1')
+mongoose.connect('localhost:27017/test-merij-3')
 let Schema = mongoose.Schema
 
 let usersSchema = new Schema({
@@ -9,6 +9,7 @@ let usersSchema = new Schema({
   registration_status: String,
   list_of_timeline: [{
     content: String,
+    type_of_content: String,
     like: String,
     createdAt: Date
   }],

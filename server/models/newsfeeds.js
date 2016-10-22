@@ -4,6 +4,7 @@ let Schema = mongoose.Schema
 let newsfeedsSchema = new Schema({
   title: String,
   content: String,
+  createdAt: Date
   //can be updated later
 })
 
