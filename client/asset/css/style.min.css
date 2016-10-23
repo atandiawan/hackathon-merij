@@ -282,6 +282,8 @@ form:not(.navbar-form):not(.form-inline) .form-group {
   border: 0px;
   border-radius: 0px;
   position: relative; }
+  .thumbnail img {
+    width: 100%; }
   .thumbnail .cover {
     background: rgba(37, 37, 37, 0.5);
     position: absolute;
@@ -324,6 +326,9 @@ form:not(.navbar-form):not(.form-inline) .form-group {
 
 .list-group {
   border-radius: 0px; }
+  .list-group img {
+    margin-top: 10px;
+    width: 100%; }
   .list-group .list-group-item {
     border-radius: 0px; }
     .list-group .list-group-item .list-group-item-heading {
