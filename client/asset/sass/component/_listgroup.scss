@@ -13,4 +13,23 @@
       margin-top: 20px;
     }
   }
+  &.transparent{
+    background: transparent;
+    .list-group-item{
+      background: transparent;
+      .thumbnail,
+      a.thumbnail{
+        padding: 0px;
+        margin: 0px;
+        .cover{
+          @include transition(all, ease-in, 0.2s);
+        }
+        &:hover, &:focus{
+          .cover{
+            background: $color-main-6;
+          }
+        }
+      }
+    }
+  }
 }
