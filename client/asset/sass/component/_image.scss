@@ -1,0 +1,20 @@
+img{
+	@include manipulation-none();
+}
+.logo-wrapper{
+  img.logo{
+    display: block;
+    margin: 0px auto;
+		&+img.logo{
+			margin-top: 10px;
+		}
+  }
+}
+img.logo{
+  &.circle{
+    height: 100px;
+  }
+  &.block{
+    height: 30px;
+  }
+}

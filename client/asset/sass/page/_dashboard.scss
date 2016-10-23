@@ -1,0 +1,18 @@
+#dashboard-content{
+  padding: 140px 0px 50px;
+  .dashboard-section{
+    display: none;
+    padding: 0px 10px;
+    &.active{
+      display: block;
+    }
+    .date{
+      color: $color-shade-4;
+      margin-bottom: 20px;
+      text-align: center;
+      i{
+        margin-right: 5px;
+      }
+    }
+  }
+}

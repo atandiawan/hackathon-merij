@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>mapinc. the easiest way to mark your area</title>
+  <link rel="shortcut icon" href="asset/image/favicon.png" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Prompt">
+  <link rel="stylesheet" href="asset/css/style.min.css">
+</head>
+<body>
+  <div class="lyt-fullscreen">
+    <div class="google-map lyt-fullscreen"><div class="map-block"></div></div>
+    <div class="lyt-vertical lyt-fullscreen lyt-theme inverse">
+      <div class="wrapper">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-4 col-sm-offset-4">
+              <div class="logo-wrapper text-center">
+                <img class="logo circle" src="asset/image/logo-circle-inverse.png" />
+                <img class="logo block" src="asset/image/logo-block-inverse.png" />
+              </div>
+              <hr class="clear lg" />
+              <form id="content-form">
+                <div class="form-group">
+                  <div class="input-group circle transparent theme inverse">
+                    <span class="input-group-addon">Username</span>
+                    <input id="txt-username" type="text" class="form-control" autocomplete="off" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="input-group circle transparent theme inverse">
+                    <span class="input-group-addon">Password</span>
+                    <input id="txt-password" type="password" class="form-control" autocomplete="off" required>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-warning btn-block circle">SIGN UP</button>
+              </form>
+              <hr class="clear sm" />
+              <div class="text-center">
+                <a href="p.signin.html" type="submit" class="text theme inverse">Already have an account?</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/lodash/4.16.2/lodash.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_muvCxO4FqTWepNvaArWY1CmrSAyRp3w&callback=initMap" async="" defer="defer"></script>
+  <script src="asset/js/core.min.js"></script>
+  <script src="asset/js/p.signup.min.js"></script>
+</body>
+</html>

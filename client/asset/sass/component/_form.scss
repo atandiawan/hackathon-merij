@@ -1,0 +1,11 @@
+form{
+  &:not(.navbar-form):not(.form-inline){
+    .form-group{
+      margin: 0px;
+      &+ .form-group,
+      &+ .btn{
+        margin-top: 15px;
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+a{
+	color: $color-shade-5 !important;
+	cursor: pointer;
+	outline: none !important;
+}
+h1, h2, h3, h4, h5, h6{
+	margin: 0px;
+}
+p{
+	margin: 0px;
+}
+.text{
+  &.theme{
+    color: $color-main-1 !important;
+		&.inverse{
+			color: $color-shade-1 !important;
+		}
+  }
+}

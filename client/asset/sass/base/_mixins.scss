@@ -1,0 +1,158 @@
+@mixin background-cover($background:transparent){
+	background:$background;
+	background-position:center center;
+	background-repeat:no-repeat !important;
+	background-size:cover;
+}
+@mixin background-pattern($background:transparent){
+	background:$background;
+	background-position:center center;
+	background-repeat:repeat !important;
+	background-size:contain;
+}
+@mixin background-contain($background:transparent){
+	background:$background;
+	background-position:center center;
+	background-repeat:no-repeat !important;
+	background-size:contain;
+}
+@mixin background-gradient($direction, $color-1, $color-2){
+	background-color:$color-1;
+    background-image:-webkit-linear-gradient($direction, $color-1, $color-2);
+    background-image:-moz-linear-gradient($direction, $color-1, $color-2);
+    background-image:-ms-linear-gradient($direction, $color-1, $color-2);
+    background-image:-o-linear-gradient($direction, $color-1, $color-2);
+    background-image:linear-gradient($direction, $color-1, $color-2);
+}
+@mixin box-shadow($hz-length, $vt-length, $blr-rad, $spr-rad, $color){
+	-webkit-box-shadow:$hz-length $vt-length $blr-rad $spr-rad $color;
+	-moz-box-shadow:$hz-length $vt-length $blr-rad $spr-rad $color;
+	box-shadow:$hz-length $vt-length $blr-rad $spr-rad $color;
+}
+@mixin calculate-width($width:100%, $padding:0px){
+	width:-moz-calc(#{$width} - #{$padding});
+	width:-webkit-calc(#{$width} - #{$padding});
+	width:-o-calc(#{$width} - #{$padding});
+	width:calc(#{$width} - #{$padding});
+}
+@mixin calculate-height($height:100%, $padding:0px){
+	height:-moz-calc(#{$height} - #{$padding});
+	height:-webkit-calc(#{$height} - #{$padding});
+	height:-o-calc(#{$height} - #{$padding});
+	height:calc(#{$height} - #{$padding});
+}
+@mixin calculate-top($top:100%, $height-1:0px, $height-2:0px){
+	top:-moz-calc(#{$top} - #{$height-1} - #{$height-2});
+	top:-webkit-calc(#{$top} - #{$height-1} - #{$height-2});
+	top:-o-calc(#{$top} - #{$height-1} - #{$height-2});
+	top:calc(#{$top} - #{$height-1} - #{$height-2});
+}
+@mixin calculate-left($left:100%, $width-1:0px, $width-2:0px){
+	left:-moz-calc(#{$left} - #{$width-1} - #{$width-2});
+	left:-webkit-calc(#{$left} - #{$width-1} - #{$width-2});
+	left:-o-calc(#{$left} - #{$width-1} - #{$width-2});
+	left:calc(#{$left} - #{$width-1} - #{$width-2});
+}
+@mixin linear-gradient($direction, $color-stops...){	
+	@if is-direction($direction) == false{
+		$color-stops:$direction, $color-stops;
+		$direction:45deg;
+	}
+	background:nth(nth($color-stops, 1), 1);
+	background:-webkit-linear-gradient(legacy-direction($direction), $color-stops);
+	background:linear-gradient($direction, $color-stops);
+}
+@mixin transition($component, $style, $time){
+	-moz-transition:$component $style $time;
+	-o-transition:$component $style $time;
+	-webkit-transition:$component $style $time;
+	transition:$component $style $time;
+}
+@mixin clear-both(){
+	clear:both;
+	content:" ";
+	display:block;
+	height:0px;
+}
+@mixin manipulation-none(){
+	-ms-touch-action:manipulation;
+	touch-action:manipulation;
+	-webkit-user-drag:none;
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
+	user-drag:none; 
+}
+@mixin grayscale(){
+	-webkit-filter:grayscale(100%);
+	filter:grayscale(100%);
+}
+@mixin rotation($degree){
+	-webkit-transform:rotate($degree);
+	-moz-transform:rotate($degree);
+	-o-transform:rotate($degree);
+	-ms-transform:rotate($degree);
+	transform:rotate($degree);
+}
+
+$mxn-wdt-large-desktop:1200px;
+$mxn-wdt-desktop:992px;
+$mxn-wdt-tablet:768px;
+$mxn-wdt-mini-phone:400px;
+
+@mixin large-desktop{
+	@media (min-width:#{$mxn-wdt-large-desktop}){
+		@content;
+	}
+}
+@mixin min-desktop{
+	@media (min-width:#{$mxn-wdt-desktop}){
+		@content;
+	}
+}
+@mixin desktop{
+	@media (min-width:#{$mxn-wdt-desktop}) and (max-width:#{$mxn-wdt-large-desktop - 1px}){
+		@content;
+	}
+}
+@mixin max-desktop{
+	@media (max-width:#{$mxn-wdt-large-desktop - 1px}){
+		@content;
+	}
+}
+@mixin min-tablet{
+	@media (min-width:#{$mxn-wdt-tablet}){
+		@content;
+	}
+}
+@mixin tablet{
+	@media (min-width:#{$mxn-wdt-tablet}) and (max-width:#{$mxn-wdt-desktop - 1px}){
+		@content;
+	}
+}
+@mixin max-tablet{
+	@media (max-width:#{$mxn-wdt-desktop - 1px}){
+		@content;
+	}
+}
+@mixin min-phone{
+	@media (min-width:#{$mxn-wdt-mini-phone}){
+		@content;
+	}
+}
+@mixin phone{
+	@media (min-width:#{$mxn-wdt-mini-phone}) and (max-width:#{$mxn-wdt-tablet - 1px}){
+		@content;
+	}
+}
+@mixin max-phone{
+	@media (max-width:#{$mxn-wdt-tablet - 1px}){
+		@content;
+	}
+}
+@mixin mini-phone{
+	@media (max-width:#{$mxn-wdt-mini-phone}){
+		@content;
+	}
+}

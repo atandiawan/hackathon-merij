@@ -1,0 +1,13 @@
+/*
+	File : _reset.scss
+	Desc : To override default bootstrap css
+*/
+.row.no-gutter{
+	margin: 0px;
+	> [class*="col-"]{
+		padding: 0px;
+	}
+}
+[class*="col-"].no-gutter{
+	padding: 0px;
+}

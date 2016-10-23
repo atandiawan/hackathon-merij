@@ -1,0 +1,86 @@
+::-webkit-input-placeholder{
+	opacity: 0.5;
+}
+:-moz-placeholder{
+	opacity: 0.5;
+}
+::-moz-placeholder{
+	opacity: 0.5;
+}
+:-ms-input-placeholder{
+	opacity: 0.5;
+}
+.form-control{
+  background: $color-shade-1;
+  border-radius: 0px;
+  box-shadow: none !important;
+  outline: none !important;
+  @include transition(all, ease-in, 0.2s);
+  &.transparent{
+    background: transparent;
+    &:focus,
+    &.filled{
+      background: $color-shade-1;
+    }
+  }
+  &.circle{
+    border: 2px solid $color-shade-1;
+    border-radius: 20px;
+  }
+}
+.input-group{
+  .input-group-addon{
+    font-weight: bold;
+  }
+  &.transparent{
+    .input-group-addon{
+      background: $color-shade-1;
+    }
+    .form-control{
+      background: transparent;
+      &:focus,
+      &.filled{
+        background: $color-shade-1;
+      }
+    }
+  }
+  &.circle{
+    .input-group-addon,
+    .form-control{
+      border: 2px solid $color-shade-1;
+      border-radius: 20px;
+    }
+    .input-group-addon{
+      &:first-child{
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+        border-right: 0px;
+      }
+      &+.form-control{
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+        border-left: 0px;
+      }
+    }
+  }
+	&.theme{
+		.input-group-addon{
+      background: $color-main-1;
+			color: $color-shade-1;
+    }
+    .input-group-addon,
+    .form-control{
+      border-color: $color-main-1;
+    }
+		&.inverse{
+			.input-group-addon{
+	      background: $color-shade-1;
+				color: $color-main-1;
+	    }
+			.input-group-addon,
+	    .form-control{
+	      border-color: $color-shade-1;
+	    }
+		}
+  }
+}

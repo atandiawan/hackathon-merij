@@ -1,0 +1,12 @@
+.btn{
+  border-radius: 0px;
+  font-weight: bold;
+  outline: none !important;
+  &.circle{
+    border-radius: 20px;
+  }
+  &.theme{
+    border: 2px solid $color-main-1;
+    color: $color-main-1 !important;
+  }
+}

@@ -1,0 +1,54 @@
+.calendar{
+  background: $color-shade-1;
+  margin-bottom: 15px;
+  padding: 10px;
+  table.table{
+    border: 0px;
+    margin: 0px;
+    thead{
+      tr{
+        th{
+          border: 0px;
+          color: $color-main-1;
+          text-align: center;
+          a{
+            i{
+              color: $color-main-1;
+              opacity: 0.8;
+            }
+            &:focus, &:hover{
+              i{
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+    }
+    tbody{
+      tr{
+        td{
+          color: $color-main-1;
+          text-align: center;
+          position: relative;
+          padding: 10px;
+          height: 50px;
+          @include calculate-width(100% / 7, 0)
+          .date{
+            color: $color-shade-3;
+            font-size: 12px;
+            margin: 0px !important;
+            opacity: 0.5;
+            padding: 5px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+          }
+          i{
+            margin-top: 8px;
+          }
+        }
+      }
+    }
+  }
+}

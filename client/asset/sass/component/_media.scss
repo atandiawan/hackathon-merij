@@ -1,0 +1,7 @@
+.media{
+  background: $color-shade-1;
+  padding: 10px;
+  & + .media{
+    margin-top: 15px;
+  }
+}
